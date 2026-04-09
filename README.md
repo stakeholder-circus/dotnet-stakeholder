@@ -1,43 +1,19 @@
-# rust-stakeholder
+> [!IMPORTANT]
+> This repository is part of a Codex-assisted rewrite experiment. All changes are manually reviewed, a human remains in the loop, and missing behavior is tracked explicitly rather than hidden. The project exists for fun, research, language learning, AI agent workflow/planning, interop experiments, and code review testing.
+# dotnet-stakeholder
 
-Satirical CLI output generator, now serving as the 2026+ source baseline for the multi-language `stakeholder` rewrite program.
+`dotnet-stakeholder` is now the widened classic-six follower for the stakeholder rewrite.
 
-## Status
-- Rust is the source-of-truth implementation.
-- The runtime is now scheduler-driven and deterministic under seed.
-- The baseline includes modern generator families for agents, AI operations, blockchain, healthcare, EV charging, protocol ecosystems, multilingual security flavor packs, and quantum-themed infrastructure work.
-- Experimental live-provider concepts exist in the design, but deterministic parity behavior remains the default path.
+## Commands
+- `dotnet run --project src/DotnetStakeholder/DotnetStakeholder.csproj -- --list-values`
+- `dotnet run --project src/DotnetStakeholder/DotnetStakeholder.csproj -- --dev-type backend --complexity medium`
+- `dotnet test tests/DotnetStakeholder.Tests/DotnetStakeholder.Tests.csproj`
+- `dotnet build src/DotnetStakeholder/DotnetStakeholder.csproj`
+- `docker build -t dotnet-stakeholder .`
+- `docker run --rm dotnet-stakeholder --list-values`
 
-## Command contract
-- `cargo fmt`
-- `cargo clippy -- -D warnings`
-- `cargo build`
-- `cargo test`
-- `docker build -t rust-stakeholder .`
-- `docker run --rm rust-stakeholder --list-values`
-
-## Example usage
-```bash
-cargo run -- --dev-type security --jargon high --complexity extreme --alerts --seed 42
-cargo run -- --dev-type blockchain --framework "rollup-mcp-gateway" --output-format json --seed 7
-cargo run -- --project "hospital-ocpp-quantum-control" --jargon extreme --team --trace --seed 11
-```
-
-## What changed in the 2026+ baseline
-- classic families were modernized instead of left as legacy parody strings
-- activity planning now uses typed family selection instead of a fixed loop
-- keyword routing brings in healthcare, charging, protocol, and quantum families where relevant
-- security runs can layer multilingual language packs and persona overlays
-- JSON output is deterministic and snapshot-friendly when a seed is supplied
-
-## Docs
-- [Tooling](docs/tooling.md)
-- [Docker](docs/docker.md)
-- [Edge cases](docs/edge-cases.md)
-- [Language specialties](docs/language-specialties.md)
-- [Example outputs](docs/example-outputs.md)
-- [Experimental](docs/experimental.md)
-- [Traceability](docs/traceability/README.md)
-
-## Contributing
-See [CONTRIBUTING.md](CONTRIBUTING.md). Use Conventional Commits and keep Rust behavior traceable because downstream repos depend on this baseline.
+## Notes
+- Classic-six now has dedicated renderers for `code_analyzer`, `data_processing`, `jargon`, `metrics`, `network_activity`, and `system_monitoring`.
+- `agent_workflows` remains dedicated in the modern-core lane.
+- Experimental provider flags are parsed and fail fast until that runtime lands.
+- The static CLI and normalized JSON contract are shared with the web and future follower ports.

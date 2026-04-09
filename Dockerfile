@@ -1,11 +1,11 @@
-FROM rust:1-bookworm AS build
-WORKDIR /workspace
-COPY Cargo.toml Cargo.lock ./
-COPY src ./src
-RUN cargo test && cargo build --release
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY . .
+RUN dotnet restore dotnet-stakeholder.sln
+RUN dotnet test dotnet-stakeholder.sln
+RUN dotnet publish src/DotnetStakeholder/DotnetStakeholder.csproj -c Release -o /app/publish
 
-FROM debian:bookworm-slim
+FROM mcr.microsoft.com/dotnet/runtime:8.0
 WORKDIR /app
-COPY --from=build /workspace/target/release/rust-stakeholder /usr/local/bin/rust-stakeholder
-ENTRYPOINT ["rust-stakeholder"]
-CMD ["--list-values"]
+COPY --from=build /app/publish .
+ENTRYPOINT ["dotnet", "DotnetStakeholder.dll"]

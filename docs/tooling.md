@@ -1,19 +1,12 @@
-# Rust Tooling
+# Tooling
 
-## Commands
-- `cargo fmt`
-- `cargo clippy -- -D warnings`
-- `cargo build`
-- `cargo test`
-- `docker build -t rust-stakeholder .`
-- `docker run --rm rust-stakeholder --list-values`
-
-## Extended local checks
-- `cargo nextest run`
-- `cargo audit`
-- `cargo deny check`
-- `cargo udeps`
+## Standard commands
+- `dotnet format dotnet-stakeholder.sln --verify-no-changes`
+- `dotnet build dotnet-stakeholder.sln`
+- `dotnet test dotnet-stakeholder.sln`
+- `docker build -t dotnet-stakeholder .`
+- `docker run --rm dotnet-stakeholder --list-values`
 
 ## Notes
-- The Docker path is the reproducible Linux baseline.
-- Native CI should still cover macOS and Windows semantics.
+- `Directory.Build.props` enables warning-as-error behavior and latest analysis for the scaffold.
+- `dotnet format` is the formatter/linter gate for C# sources in this repo.
