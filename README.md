@@ -2,7 +2,7 @@
 > This repository is part of a Codex-assisted rewrite experiment. All changes are manually reviewed, a human remains in the loop, and missing behavior is tracked explicitly rather than hidden. The project exists for fun, research, language learning, AI agent workflow/planning, interop experiments, and code review testing.
 # dotnet-stakeholder
 
-`dotnet-stakeholder` is now the follower implementation through the modern-core wave for the stakeholder rewrite.
+`dotnet-stakeholder` is the current validated follower baseline through the modern-core wave for the stakeholder rewrite, with the live-provider lane still open for a later phase.
 
 ## Commands
 - `dotnet run --project src/DotnetStakeholder/DotnetStakeholder.csproj -- --list-values`
@@ -15,5 +15,5 @@
 ## Notes
 - Classic-six has dedicated renderers for `code_analyzer`, `data_processing`, `jargon`, `metrics`, `network_activity`, and `system_monitoring`.
 - Modern-core now has dedicated renderers for `agent_workflows`, `platform_engineering`, `observability_ai_runtime`, `delivery_preview_ops`, and `supply_chain_security`.
-- Experimental provider flags are parsed and fail fast until that runtime lands.
+- Experimental provider flags are parsed and fail fast as the current open gap in the future live-provider lane.
 - The static CLI and normalized JSON contract are shared with the web and future follower ports.
