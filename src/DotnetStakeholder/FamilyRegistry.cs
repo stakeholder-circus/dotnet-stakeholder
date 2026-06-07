@@ -12,10 +12,10 @@ public static class FamilyRegistry
         new() { Id = "system_monitoring", Label = "system_monitoring", Group = FamilyGroup.ClassicSix, Summary = "health, backpressure, saturation", RendererKey = "classic-six.system_monitoring", Smoke = true },
 
         new() { Id = "agent_workflows", Label = "agent_workflows", Group = FamilyGroup.ModernCore, Summary = "delegation, retries, approvals", RendererKey = "modern-core.agent_workflows", Smoke = true },
-        new() { Id = "platform_engineering", Label = "platform_engineering", Group = FamilyGroup.ModernCore, Summary = "golden paths, identity, queues", RendererKey = "modern-core.fallback" },
-        new() { Id = "observability_ai_runtime", Label = "observability_ai_runtime", Group = FamilyGroup.ModernCore, Summary = "tracing, burn rate, GPU pressure", RendererKey = "modern-core.fallback" },
-        new() { Id = "delivery_preview_ops", Label = "delivery_preview_ops", Group = FamilyGroup.ModernCore, Summary = "preview deploys, canaries, flags", RendererKey = "modern-core.fallback" },
-        new() { Id = "supply_chain_security", Label = "supply_chain_security", Group = FamilyGroup.ModernCore, Summary = "provenance, attestations, secrets", RendererKey = "modern-core.fallback" },
+        new() { Id = "platform_engineering", Label = "platform_engineering", Group = FamilyGroup.ModernCore, Summary = "golden paths, identity, queues", RendererKey = "modern-core.platform_engineering", Smoke = true },
+        new() { Id = "observability_ai_runtime", Label = "observability_ai_runtime", Group = FamilyGroup.ModernCore, Summary = "tracing, burn rate, GPU pressure", RendererKey = "modern-core.observability_ai_runtime", Smoke = true },
+        new() { Id = "delivery_preview_ops", Label = "delivery_preview_ops", Group = FamilyGroup.ModernCore, Summary = "preview deploys, canaries, flags", RendererKey = "modern-core.delivery_preview_ops", Smoke = true },
+        new() { Id = "supply_chain_security", Label = "supply_chain_security", Group = FamilyGroup.ModernCore, Summary = "provenance, attestations, secrets", RendererKey = "modern-core.supply_chain_security", Smoke = true },
 
         new() { Id = "ai_inference_ops", Label = "ai_inference_ops", Group = FamilyGroup.AiGovernance, Summary = "model routing, fallback, cache", RendererKey = "ai-governance.fallback" },
         new() { Id = "knowledge_retrieval", Label = "knowledge_retrieval", Group = FamilyGroup.AiGovernance, Summary = "stale embeddings, recall, citations", RendererKey = "ai-governance.fallback" },
