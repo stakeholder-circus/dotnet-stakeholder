@@ -54,6 +54,7 @@ public static class DotnetStakeholderJson
                 label = family.Label,
                 group = family.Group.ToString(),
                 summary = family.Summary,
+                rendererKey = family.RendererKey,
                 renderer = family.RendererKey,
                 smoke = family.Smoke
             }).Cast<object>().ToArray(),
