@@ -61,7 +61,7 @@ public class SmokeTests
         Assert.Contains(session.GetProperty("selectedFamilies").EnumerateArray(), item => item.GetString() == familyId);
 
         var events = session.GetProperty("events").EnumerateArray().ToArray();
-        var activity = Assert.Single(events.Where(eventItem => eventItem.GetProperty("eventType").GetString() == "generator.activity" && eventItem.GetProperty("context").GetProperty("family").GetString() == familyId));
+        var activity = Assert.Single(events, eventItem => eventItem.GetProperty("eventType").GetString() == "generator.activity" && eventItem.GetProperty("context").GetProperty("family").GetString() == familyId);
         Assert.Equal(rendererKey, activity.GetProperty("context").GetProperty("renderer").GetString());
         Assert.True(activity.GetProperty("context").GetProperty("smoke").GetBoolean());
         Assert.Equal("dedicated smoke renderer", activity.GetProperty("context").GetProperty("detail").GetString());
@@ -80,7 +80,7 @@ public class SmokeTests
         Assert.Contains(session.GetProperty("selectedFamilies").EnumerateArray(), item => item.GetString() == "agent_workflows");
 
         var events = session.GetProperty("events").EnumerateArray().ToArray();
-        var activity = Assert.Single(events.Where(eventItem => eventItem.GetProperty("eventType").GetString() == "generator.activity" && eventItem.GetProperty("context").GetProperty("family").GetString() == "agent_workflows"));
+        var activity = Assert.Single(events, eventItem => eventItem.GetProperty("eventType").GetString() == "generator.activity" && eventItem.GetProperty("context").GetProperty("family").GetString() == "agent_workflows");
         Assert.Contains("delegation", activity.GetProperty("message").GetString()!, StringComparison.OrdinalIgnoreCase);
         Assert.Contains("Java, Rust, and stakeholder-core", activity.GetProperty("message").GetString()!, StringComparison.Ordinal);
         Assert.Equal("modern-core.agent_workflows", activity.GetProperty("context").GetProperty("renderer").GetString());
@@ -105,7 +105,7 @@ public class SmokeTests
         Assert.Contains(session.GetProperty("selectedFamilies").EnumerateArray(), item => item.GetString() == familyId);
 
         var events = session.GetProperty("events").EnumerateArray().ToArray();
-        var activity = Assert.Single(events.Where(eventItem => eventItem.GetProperty("eventType").GetString() == "generator.activity" && eventItem.GetProperty("context").GetProperty("family").GetString() == familyId));
+        var activity = Assert.Single(events, eventItem => eventItem.GetProperty("eventType").GetString() == "generator.activity" && eventItem.GetProperty("context").GetProperty("family").GetString() == familyId);
         Assert.Equal(rendererKey, activity.GetProperty("context").GetProperty("renderer").GetString());
         Assert.True(activity.GetProperty("context").GetProperty("smoke").GetBoolean());
         Assert.Equal("dedicated smoke renderer", activity.GetProperty("context").GetProperty("detail").GetString());
